@@ -2,6 +2,6 @@ package Interface;
 
 public interface AUnIdentifiant
 {
-    int getIdentifiant();
-    void setIdentifiant(int i);
+    public int getIdentifiant();
+    public void setIdentifiant(int i);
 }
