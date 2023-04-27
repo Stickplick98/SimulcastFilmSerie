@@ -1,5 +1,7 @@
-import java.time.LocalDate;
+package TypeOeuvre;
 
+import java.time.LocalDate;
+import Interface.AUneCotation;
 public class Film extends Oeuvre implements AUneCotation
 {
     int coteFilm;
@@ -13,7 +15,7 @@ public class Film extends Oeuvre implements AUneCotation
     }
     public Film(String n , int t, int i, LocalDate d, String desc, String e, CategorieOeuvre o, ClassificationOeuvre oe)
     {
-        super(n, t, i, d, desc, e);
+        //super(n, t, i, d, desc, e);
         setCotation(0);
         setCategorieFilm(o);
         setClassificationFilm(oe);
@@ -58,7 +60,7 @@ public class Film extends Oeuvre implements AUneCotation
         return "Film{" +
                 "coteFilm=" + coteFilm +
                 ", classificationFilm=" + classificationFilm +
-                ", categorieFilm=" + categorieFilm +
+                ", categorieFilm='" + categorieFilm + '\'' +
                 ", nom='" + nom + '\'' +
                 ", temps=" + temps +
                 ", identifiant=" + identifiant +

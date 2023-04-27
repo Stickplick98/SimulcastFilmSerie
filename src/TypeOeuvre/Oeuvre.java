@@ -1,6 +1,8 @@
+package TypeOeuvre;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
-
+import Interface.AUnIdentifiant;
 public abstract class Oeuvre implements AUnIdentifiant
 {
     protected String nom;
@@ -22,12 +24,16 @@ public abstract class Oeuvre implements AUnIdentifiant
         description = "description vide";
         editeur = "editeur inconnu";
     }
-    public Oeuvre(String n ,int t,int i, LocalDate d, String desc, String e)
+    public Oeuvre(String n ,int t,int i, LocalDate d, String desc, String e, String a,String st)
     {
         setNom(n);
         setTemps(t);
         setIdentifiant(i);
         setDateSortie(d);
+        setDescription(desc);
+        setEditeur(e);
+        audio.add(a);
+        sousTitre.add(st);
     }
 
     //getter et setter

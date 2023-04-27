@@ -1,4 +1,7 @@
+package TypeOeuvre;
+
 import java.time.LocalDate;
+import Interface.AUneCotation;
 
 public class Anime extends Oeuvre implements AUneCotation
 {
@@ -13,7 +16,7 @@ public class Anime extends Oeuvre implements AUneCotation
     }
     public Anime(String n , int t, int i, LocalDate d, String desc, String e, CategorieOeuvre o, ClassificationOeuvre oe)
     {
-        super(n, t, i, d, desc, e);
+        //super(n, t, i, d, desc, e);
         setCotation(0);
         setCategorieAnime(o);
         setClassificationAnime(oe);
@@ -54,7 +57,7 @@ public class Anime extends Oeuvre implements AUneCotation
 
     @Override
     public String toString() {
-        return "Anime{" +
+        return "TypeOeuvre.Anime{" +
                 "coteAnime=" + coteAnime +
                 ", classificationAnime=" + classificationAnime +
                 ", categorieAnime=" + categorieAnime +

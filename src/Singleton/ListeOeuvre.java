@@ -1,3 +1,10 @@
+package Singleton;
+
+import TypeOeuvre.Anime;
+import TypeOeuvre.Film;
+import TypeOeuvre.Serie;
+import TypeOeuvre.Trailer;
+
 import java.util.ArrayList;
 
 public class ListeOeuvre

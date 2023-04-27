@@ -1,3 +1,7 @@
+package InterfaceGraphique;
+
+import ComposantInterfaceGraphique.MonTreeModele;
+
 import javax.swing.*;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -79,7 +83,6 @@ public class InterfacePrincipale extends JFrame
         DefaultMutableTreeNode serie = new DefaultMutableTreeNode("Serie");
         DefaultMutableTreeNode anime = new DefaultMutableTreeNode("Anime");
         DefaultMutableTreeNode trailer = new DefaultMutableTreeNode("Trailer");
-        DefaultMutableTreeNode favoris = new DefaultMutableTreeNode("Favoris");
 
         DefaultMutableTreeNode[] nodes = {film, serie, anime, trailer};
         for (DefaultMutableTreeNode node : nodes)
@@ -121,7 +124,6 @@ public class InterfacePrincipale extends JFrame
         racine.add(serie);
         racine.add(anime);
         racine.add(trailer);
-        racine.add(favoris);
 
         MonTreeModele test = new MonTreeModele(racine);
         arbre.setModel(test);
@@ -129,10 +131,10 @@ public class InterfacePrincipale extends JFrame
         //PanelTree.add(racine);
         /*PanelList = new JPanel();
         ScrollList.setViewportView(PanelList);
-        Serie = new JList();
-        Anime = new JList();
-        Film = new JList();
-        Trailer = new JList();
+        TypeOeuvre.Serie = new JList();
+        TypeOeuvre.Anime = new JList();
+        TypeOeuvre.Film = new JList();
+        TypeOeuvre.Trailer = new JList();
 
         DefaultListModel<String> model = new DefaultListModel<>();
         model.addElement("Élément 1");
@@ -154,15 +156,15 @@ public class InterfacePrincipale extends JFrame
         model3.addElement("Élément 2");
         model3.addElement("Élément 3");
 
-        JList<String> Film = new JList<>(model);
-        JList<String> Serie = new JList<>(model1);
-        JList<String> Anime = new JList<>(model2);
-        JList<String> Trailer = new JList<>(model3);
+        JList<String> TypeOeuvre.Film = new JList<>(model);
+        JList<String> TypeOeuvre.Serie = new JList<>(model1);
+        JList<String> TypeOeuvre.Anime = new JList<>(model2);
+        JList<String> TypeOeuvre.Trailer = new JList<>(model3);
 
-        PanelList.add(Serie);
-        PanelList.add(Anime);
-        PanelList.add(Film);
-        PanelList.add(Trailer);*/
+        PanelList.add(TypeOeuvre.Serie);
+        PanelList.add(TypeOeuvre.Anime);
+        PanelList.add(TypeOeuvre.Film);
+        PanelList.add(TypeOeuvre.Trailer);*/
 
 
     }

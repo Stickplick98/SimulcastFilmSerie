@@ -1,3 +1,5 @@
+package TypeOeuvre;
+
 import java.time.LocalDate;
 
 public class Trailer extends Oeuvre
@@ -10,7 +12,7 @@ public class Trailer extends Oeuvre
     }
     public Trailer(String n , int t, int i, LocalDate d, String desc, String e, CategorieOeuvre o, ClassificationOeuvre oe)
     {
-        super(n, t, i, d, desc, e);
+        //super(n, t, i, d, desc, e);
         setCategorieTrailer(o);
         setClassificationTrailer(oe);
     }

@@ -1,5 +1,7 @@
-import java.time.LocalDate;
+package TypeOeuvre;
 
+import java.time.LocalDate;
+import Interface.AUneCotation;
 public class Serie extends Oeuvre implements AUneCotation
 {
     int coteSerie;
@@ -11,12 +13,12 @@ public class Serie extends Oeuvre implements AUneCotation
         super();
         coteSerie = 0;
     }
-    public Serie(String n , int t, int i, LocalDate d, String desc, String e, CategorieOeuvre o, ClassificationOeuvre oe)
+    public Serie(String n , int t, int i, LocalDate d, String desc, String e, String a, String st /*CategorieOeuvre o, ClassificationOeuvre oe*/)
     {
-        super(n, t, i, d, desc, e);
+        super(n, t, i, d, desc, e, a, st);
         setCotation(0);
-        setCategorieSerie(o);
-        setClassificationSerie(oe);
+        //setCategorieSerie(o);
+        //setClassificationSerie(oe);
     }
     //getter et setter
     @Override
@@ -54,7 +56,7 @@ public class Serie extends Oeuvre implements AUneCotation
 
     @Override
     public String toString() {
-        return "Serie{" +
+        return "TypeOeuvre.Serie{" +
                 "coteSerie=" + coteSerie +
                 ", classificationSerie=" + classificationSerie +
                 ", categorieSerie=" + categorieSerie +
