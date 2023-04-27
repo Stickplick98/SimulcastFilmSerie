@@ -124,6 +124,7 @@
             </constraints>
             <properties>
               <background color="-657935"/>
+              <editable value="true"/>
             </properties>
           </component>
         </children>

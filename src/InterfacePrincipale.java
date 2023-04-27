@@ -17,6 +17,7 @@ public class InterfacePrincipale extends JFrame
 
     public InterfacePrincipale()
     {
+        setSize(800,600);
         //mainPanel = new JPanel();
         setContentPane(mainPanel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,6 +40,7 @@ public class InterfacePrincipale extends JFrame
         JMenuItem jMenuItem5 = new JMenuItem();
         JMenuItem jMenuItem6 = new JMenuItem();
         JMenuItem jMenuItem7 = new JMenuItem();
+        JMenuItem jMenuItem8 = new JMenuItem();
 
         jMenu1.setText("Connexion");
         jMenu2.setText("Ajouter");
@@ -50,6 +52,7 @@ public class InterfacePrincipale extends JFrame
         jMenuItem5.setText("Série");
         jMenuItem6.setText("Anime");
         jMenuItem7.setText("Trailer");
+        jMenuItem8.setText("Créer un compte");
 
         jMenuBar1.add(jMenu1);
         jMenuBar1.add(jMenu2);
@@ -57,6 +60,8 @@ public class InterfacePrincipale extends JFrame
         jMenu1.add(jMenuItem1);
         jMenu1.addSeparator();
         jMenu1.add(jMenuItem2);
+        jMenu1.addSeparator();
+        jMenu1.add(jMenuItem8);
         jMenu1.addSeparator();
         jMenu1.add(jMenuItem3);
         jMenu2.add(jMenuItem4);
@@ -74,6 +79,7 @@ public class InterfacePrincipale extends JFrame
         DefaultMutableTreeNode serie = new DefaultMutableTreeNode("Serie");
         DefaultMutableTreeNode anime = new DefaultMutableTreeNode("Anime");
         DefaultMutableTreeNode trailer = new DefaultMutableTreeNode("Trailer");
+        DefaultMutableTreeNode favoris = new DefaultMutableTreeNode("Favoris");
 
         DefaultMutableTreeNode[] nodes = {film, serie, anime, trailer};
         for (DefaultMutableTreeNode node : nodes)
@@ -115,10 +121,13 @@ public class InterfacePrincipale extends JFrame
         racine.add(serie);
         racine.add(anime);
         racine.add(trailer);
+        racine.add(favoris);
 
-        /*arbre = new JTree(racine);
-        PanelTree.add(arbre);
-        PanelList = new JPanel();
+        MonTreeModele test = new MonTreeModele(racine);
+        arbre.setModel(test);
+        //arbre = new JTree(racine);
+        //PanelTree.add(racine);
+        /*PanelList = new JPanel();
         ScrollList.setViewportView(PanelList);
         Serie = new JList();
         Anime = new JList();
