@@ -24,7 +24,7 @@ public class Trailer extends Oeuvre
     {
         return categorieTrailer;
     }
-    public void setClassificationTrailer(ClassificationOeuvre classificationSerie)
+    /*public void setClassificationTrailer(ClassificationOeuvre classificationSerie)
     {
         if(classificationSerie.equals(ClassificationOeuvre.ALL) || classificationSerie.equals(ClassificationOeuvre.pegi6) || classificationSerie.equals(ClassificationOeuvre.pegi9) || classificationSerie.equals(ClassificationOeuvre.pegi12) || classificationSerie.equals(ClassificationOeuvre.pegi14) || classificationSerie.equals(ClassificationOeuvre.pegi16) || classificationSerie.equals(ClassificationOeuvre.pegi18))
             this.classificationTrailer = classificationSerie;
@@ -37,7 +37,7 @@ public class Trailer extends Oeuvre
             this.categorieTrailer = categorieSerie;
         else
             System.out.println("Categorie invalide !");
-    }
+    }*/
 
     public static void main(String[] args)
     {

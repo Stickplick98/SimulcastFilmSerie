@@ -13,12 +13,12 @@ public class Film extends Oeuvre implements AUneCotation
         super();
         coteFilm = 0;
     }
-    public Film(String n , int t, int i, LocalDate d, String desc, String e, String a, String st/*, CategorieOeuvre o, ClassificationOeuvre oe*/)
+    public Film(String n , int t, int i, LocalDate d, String desc, String e, String a, String st, String o, int oe)
     {
         super(n, t, i, d, desc, e, a, st);
         setCotation(0);
-        //setCategorieFilm(o);
-        //setClassificationFilm(oe);
+        setCategorieFilm(o);
+        setClassificationFilm(oe);
     }
     //getter et setter
     @Override
@@ -26,13 +26,13 @@ public class Film extends Oeuvre implements AUneCotation
     {
         return coteFilm;
     }
-    public ClassificationOeuvre getClassificationFilm()
+    public int getClassificationFilm()
     {
-        return classificationFilm;
+        return classificationFilm.getNom();
     }
-    public CategorieOeuvre getCategorieFilm()
+    public String getCategorieFilm()
     {
-        return categorieFilm;
+        return categorieFilm.getNom();
     }
     @Override
     public void setCotation(int coteFilm)
@@ -40,19 +40,59 @@ public class Film extends Oeuvre implements AUneCotation
         this.coteFilm = coteFilm;
     }
 
-    public void setClassificationFilm(ClassificationOeuvre classificationFilm)
+    public void setClassificationFilm(int classification)
     {
-        if(classificationFilm.equals(ClassificationOeuvre.ALL) || classificationFilm.equals(ClassificationOeuvre.pegi6) || classificationFilm.equals(ClassificationOeuvre.pegi9) || classificationFilm.equals(ClassificationOeuvre.pegi12) || classificationFilm.equals(ClassificationOeuvre.pegi14) || classificationFilm.equals(ClassificationOeuvre.pegi16) || classificationFilm.equals(ClassificationOeuvre.pegi18))
-            this.classificationFilm = classificationFilm;
-        else
-            System.out.println("Classification inexistante !");
+        switch(classification)
+        {
+            case 0:
+                classificationFilm = ClassificationOeuvre.ALL;
+                break;
+            case 6:
+                classificationFilm = ClassificationOeuvre.PEGI6;
+                break;
+            case 9:
+                classificationFilm = ClassificationOeuvre.PEGI9;
+                break;
+            case 12:
+                classificationFilm = ClassificationOeuvre.PEGI12;
+                break;
+            case 14:
+                classificationFilm = ClassificationOeuvre.PEGI14;
+                break;
+            case 16:
+                classificationFilm = ClassificationOeuvre.PEGI16;
+                break;
+            case 18:
+                classificationFilm = ClassificationOeuvre.PEGI18;
+                break;
+            default:
+                System.out.println("Classification inexistante !");
+                break;
+        }
     }
-    public void setCategorieFilm(CategorieOeuvre categorieFilm)
+    public void setCategorieFilm(String categorie)
     {
-        if(categorieFilm.equals(CategorieOeuvre.CATEGORIE_AVENTURE) || categorieFilm.equals(CategorieOeuvre.CATEGORIE_ACTION) || categorieFilm.equals(CategorieOeuvre.CATEGORIE_DRAME) || categorieFilm.equals(CategorieOeuvre.CATEGORIE_HORREUR) || categorieFilm.equals(CategorieOeuvre.CATEGORIE_SCIENCEFICTION))
-            this.categorieFilm = categorieFilm;
-        else
-            System.out.println("Categorie invalide !");
+        switch(categorie)
+        {
+            case "Horreur":
+                categorieFilm = CategorieOeuvre.HORREUR;
+                break;
+            case "Drame":
+                categorieFilm = CategorieOeuvre.DRAME;
+                break;
+            case "Action":
+                categorieFilm = CategorieOeuvre.ACTION;
+                break;
+            case "Aventure":
+                categorieFilm = CategorieOeuvre.AVENTURE;
+                break;
+            case "Science-Fiction":
+                categorieFilm = CategorieOeuvre.SCIENCEFICTION;
+                break;
+            default:
+                System.out.println("Categorie inexistante !");
+                break;
+        }
     }
 
     @Override
@@ -75,7 +115,7 @@ public class Film extends Oeuvre implements AUneCotation
     public static void main(String[] args)
     {
         LocalDate dateSortie = LocalDate.of(2022, 3, 15);
-        Film film1 = new Film("Titre du film", 120, 123456, dateSortie, "Description du film", "Nom de l'éditeur", "Français", "Espagnol");
+        Film film1 = new Film("Titre du film", 120, 123456, dateSortie, "Description du film", "Nom de l'éditeur", "Français", "Espagnol","Drame",9);
         System.out.println(film1.toString());
     }
 }
