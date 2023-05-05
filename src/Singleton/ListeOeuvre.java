@@ -4,6 +4,8 @@ import TypeOeuvre.Anime;
 import TypeOeuvre.Film;
 import TypeOeuvre.Serie;
 import TypeOeuvre.Trailer;
+import Utilisateur.Administrateur;
+import Utilisateur.client;
 
 import java.util.ArrayList;
 
@@ -13,6 +15,8 @@ public class ListeOeuvre
     private ArrayList<Serie> listeSerie = new ArrayList<Serie>();
     private ArrayList<Anime> listeAnime = new ArrayList<Anime>();
     private ArrayList<Trailer> listeTrailer = new ArrayList<Trailer>();
+    private Administrateur Admin;
+    private client Client;
 
     //utilisateur à rajouter
     private static ListeOeuvre instance = null;

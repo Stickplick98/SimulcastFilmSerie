@@ -99,8 +99,8 @@ public class Film extends Oeuvre implements AUneCotation
     public String toString() {
         return "Film{" +
                 "coteFilm=" + coteFilm +
-                ", classificationFilm=" + classificationFilm +
-                ", categorieFilm='" + categorieFilm + '\'' +
+                ", classificationFilm=" + getClassificationFilm() +
+                ", categorieFilm='" + getCategorieFilm() + '\'' +
                 ", nom='" + nom + '\'' +
                 ", temps=" + temps +
                 ", identifiant=" + identifiant +

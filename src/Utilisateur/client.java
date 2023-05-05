@@ -4,11 +4,8 @@ import java.util.ArrayList;
 public class client extends Personne
 {
     private String Telephone;
-
     private ArrayList<String> Preference =  new ArrayList<String>();
-
     private ArrayList<ListeFavoris> oeuvreFavorite;
-    //private  int IdClient;
 
     public client()
     {
@@ -43,9 +40,16 @@ public class client extends Personne
         Preference = preference;
     }
 
-    public void setFavoris (ListeFavoris favori)
+    public void setFavoris ()
     {
 
+    }
+
+    public void ajoutFavoris(int test)
+    {
+        ListeFavoris Test = new ListeFavoris(test);
+        oeuvreFavorite.add(Test);
+        System.out.println(this.toString());
     }
 
     public void ResetMotDePasse()
@@ -88,6 +92,7 @@ public class client extends Personne
         test1.add(test3);
         test1.add(test4);
         client client1= new client("Castellani", "Josue", "Sparkwillo", "Jcast05","0479/044211" ,"Horreur", test1);
-        System.out.println(client1.toString());
+        //System.out.println(client1.toString());
+        client1.ajoutFavoris(200);
     }
 }

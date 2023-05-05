@@ -98,8 +98,8 @@ public class Serie extends Oeuvre implements AUneCotation
     public String toString() {
         return "TypeOeuvre.Serie{" +
                 "coteSerie=" + coteSerie +
-                ", classificationSerie=" + classificationSerie +
-                ", categorieSerie=" + categorieSerie +
+                ", classificationSerie=" + getClassificationSerie() +
+                ", categorieSerie=" + getCategorieSerie() +
                 ", nom='" + nom + '\'' +
                 ", temps=" + temps +
                 ", identifiant=" + identifiant +

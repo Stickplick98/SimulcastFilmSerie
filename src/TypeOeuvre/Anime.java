@@ -99,8 +99,8 @@ public class Anime extends Oeuvre implements AUneCotation
     public String toString() {
         return "Anime{" +
                 "coteAnime=" + coteAnime +
-                ", classificationAnime=" + classificationAnime +
-                ", categorieAnime=" + categorieAnime +
+                ", classificationAnime=" + getClassificationAnime() +
+                ", categorieAnime=" + getCategorieAnime() +
                 ", nom='" + nom + '\'' +
                 ", temps=" + temps +
                 ", identifiant=" + identifiant +
